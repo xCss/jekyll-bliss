@@ -29,8 +29,8 @@ menu:
       url: /categories
     - name: About
       url: /about
-    - name: Links
-      url: /links
+    #- name: Links
+    #  url: /links
 
 # 社交链接
 social:
