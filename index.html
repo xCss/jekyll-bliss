@@ -50,7 +50,7 @@ layout: page
                     {% endif %}
                     <div class="index-post-date" itemprop="datePublished">{{ post.date | date: "%B %-dth, %Y" }}</div>
                     <div class="index-post-title" itemprop="name headline">
-                        <a href="{{ post.url }}" title="{{ post.title  }}" itemtype="url">{{ post.title }}</a>
+                        <a href="{{ post.url | prepend:site.baseurl }}" title="{{ post.title  }}" itemtype="url">{{ post.title }}</a>
                     </div>
                 </div>
                 <div class="index-post-content" itemprop="articleBody">
@@ -65,10 +65,10 @@ layout: page
                 </div>
 
                 <div class="index-post-meta cf">
-                    <div class="index-post-button"><a href="{{ post.url | append:"#readmore"}}"> Read more </a>
+                    <div class="index-post-button"><a href="{{ post.url | prepend:site.baseurl | append:"#readmore"}}"> Read more </a>
                     </div>
                     <div class="index-post-button index-post-comments">
-                        <a href="{{ post.url | append:"#comments" }}"> 0 comments </a>
+                        <a href="{{ post.url | prepend:site.baseurl | append:"#comments" }}"> 0 comments </a>
                     </div>
                     <div class="index-post-category">
                         <a href="/categories#{{ post.categories | url_encode  }}">{{ post.categories }}</a>
