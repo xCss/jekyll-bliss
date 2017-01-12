@@ -71,7 +71,7 @@ layout: page
                         <a href="{{ post.url | prepend:site.baseurl | append:"#comments" }}"> 0 comments </a>
                     </div>
                     <div class="index-post-category">
-                        <a href="/categories#{{ post.categories | url_encode  }}">{{ post.categories }}</a>
+                        <a href="{{site.baseurl}}/categories#{{ post.categories  | url_encode  }}">{{ post.categories }}</a>
                     </div>
                 </div>
             </div>
