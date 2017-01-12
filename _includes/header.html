@@ -40,7 +40,7 @@
     {% if page.is404 != true %}
         <div class="header">
             <div class="logo left">
-                <a href="{{site.baseurl}}">
+                <a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">
                     {{site.title}}
                 </a>
             </div>
@@ -59,7 +59,7 @@
             <div class="nav-wrapper right">
                 {% if site.menu && site.menu.length>0 %}
                     {% for menu in site.menu %}
-                        <a href="{{site.baseurl}}{{ menu.url }}" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" title="{{menu.name}}">{{menu.name}}</a>
+                        <a href="{{ menu.url }}" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" title="{{menu.name}}">{{menu.name}}</a>
                     {% endfor %}
                 {% else %}
                     <a  href="/links.html" title="Links">Links</a>

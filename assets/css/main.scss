@@ -574,9 +574,8 @@ table {
 
 .index-post-content {
   font-size: .85em;
-  line-height: 150%;
   display: block;
-  min-height: 6.5em;
+  height: 6.5em;
   padding: 0 20px 20px 20px;
   color: #888;
 }
@@ -740,6 +739,7 @@ a.index-post-cover {
   -webkit-animation: fade-in .5s;
   animation: fade-in;
   animation-duration: .5s;
+  min-height:400px;
 }
 
 .wrapper {

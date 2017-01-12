@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <div class="wrapper main" role="main">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -12,11 +12,12 @@ layout: default
             <div class="post-copyright">
                 <div class="alert" role="alert">
                     {% if page.lastdate %}<span>最后编辑时间为:{{ page.lastdate }}</span><br>{% endif %}
-                    本文由 <a href="/">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</a> 创作，采用 <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow">知识共享署名 4.0</a> 国际许可协议进行许可<br>可自由转载、引用，但需署名作者且注明文章出处</div>
+                    本文由 <a href="/">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</a> 创作，采用 <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow">知识共享署名 4.0</a> 国际许可协议进行许可<br>可自由转载、引用，但需署名作者且注明文章出处
+                </div>
             </div>
             <div class="post-tags">
                 {% for tag in page.tags %}
-                <a href="{{ post.url | prepend: site.baseurl }}/tags/{{ tag | uri_escape }}">{{ tag }}</a>
+                <a>{{ tag }}</a>
                 {% endfor %}
             </div>
         </div>

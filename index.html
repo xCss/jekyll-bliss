@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <div class="index-wrapper">
     <div class="index-posts  cf">
@@ -50,7 +50,7 @@ layout: default
                     {% endif %}
                     <div class="index-post-date" itemprop="datePublished">{{ post.date | date: "%B %-dth, %Y" }}</div>
                     <div class="index-post-title" itemprop="name headline">
-                        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title | escape }}" itemtype="url">{{ post.title | escape }}</a>
+                        <a href="{{ post.url }}" title="{{ post.title  }}" itemtype="url">{{ post.title }}</a>
                     </div>
                 </div>
                 <div class="index-post-content" itemprop="articleBody">
@@ -59,19 +59,19 @@ layout: default
 
 
                 <div class="index-post-thumb">
-                    <a class="index-post-cover" href="{{ post.url | prepend: site.baseurl }}">
+                    <a class="index-post-cover" href="{{ post.url }}">
                         <img class="thumb" src="https://o243f9mnq.qnssl.com/2017/01/4097688831.jpg?imageView2/4/w/600/h/100%">
                     </a>
                 </div>
 
                 <div class="index-post-meta cf">
-                    <div class="index-post-button"><a href="{{ post.url | prepend: site.baseurl }}"> Read more </a>
+                    <div class="index-post-button"><a href="{{ post.url | append:"#readmore"}}"> Read more </a>
                     </div>
                     <div class="index-post-button index-post-comments">
-                        <a href="{{ post.url | prepend: site.baseurl | append:"#comments" }}"> 0 comments </a>
+                        <a href="{{ post.url | append:"#comments" }}"> 0 comments </a>
                     </div>
                     <div class="index-post-category">
-                        <a href="#">{{ post.categories }}</a>
+                        <a href="/categories#{{ post.categories | url_encode  }}">{{ post.categories }}</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,27 @@
 ---
-layout: default
+layout: page
 title: Categories
 ---
+<h3 class="archive-title">- {{ page.title }} -</h3>
+<div class="archives-outer">
+    {% for category in site.categories %}
+        <a href="#{{ category[0] | url_encode }}" style="font-size:{{ category[1].size | plus:16}}px;" class="archive-article-date">{{ category[0] }} </a>
+    {% endfor %}
+</div>
+<div class="archives-outer">
+    <div class="archives-wrapper cf">
+    {% for category in site.categories %}
+        <div class="archive-year" id="{{category[0] | url_encode}}">{{category[0]}}</div>
+        {% assign name = category[0] %}
+        {% for post in site.categories[name] %}
+            <a href="{{ post.url | prepend: site.baseurl }}" itemprop="name" target="_blank" class="archives cf">
+                <div class="archive-article">
+                    <div class="archive-article-inner">
+                        <span class="archive-article-date">{{post.date | date:'%b %-dth, %Y'}} </span> {{post.title}}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    {% endfor %}
+    </div>
+</div>

@@ -20,7 +20,6 @@ author: 云淡风轻
 language: zh-cn
 timezone: Asia/Shanghai
 since: 2013
-github: 'https://github.com/xCss'
 
 menu:
     - name: Archives
@@ -29,8 +28,8 @@ menu:
       url: /categories
     - name: About
       url: /about
-    #- name: Links
-    #  url: /links
+    - name: Links
+      url: /links
 
 # 社交链接
 social:
@@ -49,3 +48,9 @@ social:
   - name: RSS
     url:  /feed.xml
     icon: rss
+
+links:
+  - name: Google
+    url: 'https://google.com'
+  - name: jekyll
+    url: 'http://jekyllrb.com'
