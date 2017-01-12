@@ -1,0 +1,51 @@
+# Base
+baseurl: "" # the subpath of your site, e.g. /blog
+# url: "http://example.com" # the base hostname & protocol for your site
+
+permalink: /:year/:title.html
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  
+  
+# Site Setting
+since: 2013
+anthor: xCss
+title: 云淡风轻
+subtitle: 一个安静的角落
+description: 隐约雷鸣，阴霾天空，但盼风雨来，能留你在此
+author: 云淡风轻
+language: zh-cn
+timezone: Asia/Shanghai
+since: 2013
+github: 'https://github.com/xCss'
+
+menu:
+    - name: Archives
+      url: /archives
+    - name: Categories
+      url: /categories
+    - name: About
+      url: /about
+    - name: Links
+      url: /links
+
+# 社交链接
+social:
+  - name: Github
+    url:  https://github.com/xCss
+    icon: github
+  - name: Weibo
+    url:  http://weibo.com/BingPictures
+    icon: weibo
+  - name: Twitter
+    url:  '#'
+    icon: twitter
+  - name: Google
+    url:  '#'
+    icon: 'google-plus'
+  - name: RSS
+    url:  /feed.xml
+    icon: rss

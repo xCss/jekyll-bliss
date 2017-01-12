@@ -1,0 +1,42 @@
+
+	{% if page.is404 != true %}
+        <div id="footer" class="cf">
+            {% if site.social && site.social.length>0 %}
+            <div class="social-wrapper">
+                {% for item in site.social %}
+                <a class="social {{item.icon}}" target="blank" href="{{item.url}}">
+                    <i class="icon icon-{{item.icon}}"></i>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div>
+                Theme is <a href="https://github.com/xCss/jekyll-bliss" class="codename">Bliss</a> by <a href="https://github.com/xCss" target="_blank">xCss</a> / Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+            </div>
+            <div class="copyright">
+                &copy; {% if site.since %}{{ site.since }} - {% endif %}{{ site.time | date:"%Y" }} <a href="/">{{site.title}}</a>
+            </div>
+        </div>
+
+        <script src="{{ "/assets/js/functions.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/fastclick.min.js" | prepend: site.baseurl }}" data-no-instant></script>
+        <script src="{{ "/assets/js/instantclick.min.js" | prepend: site.baseurl }}" data-no-instant></script>
+        <script data-no-instant>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-001', 'auto');
+            ga('send', 'pageview');
+
+            InstantClick.on('change', function(isInitialLoad) {
+                if (isInitialLoad === false) {
+                    if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search);
+                }
+            });
+           InstantClick.init();
+        </script>
+    {% endif %}
+	</body>
+</html>
