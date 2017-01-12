@@ -1,5 +1,5 @@
 # Base
-baseurl: "/jekyll-bliss/" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-bliss" # the subpath of your site, e.g. /blog
 # url: "http://example.com" # the base hostname & protocol for your site
 
 permalink: /:year/:title.html
