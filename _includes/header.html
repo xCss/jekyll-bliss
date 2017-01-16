@@ -59,7 +59,7 @@
             <div class="nav-wrapper right">
                 {% if site.menu && site.menu.length>0 %}
                     {% for menu in site.menu %}
-                        <a href="{{ menu.url }}" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" title="{{menu.name}}">{{menu.name}}</a>
+                        <a href="{{ menu.url | prepend:site.baseurl}}" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" title="{{menu.name}}">{{menu.name}}</a>
                     {% endfor %}
                 {% else %}
                     <a  href="/links.html" title="Links">Links</a>
