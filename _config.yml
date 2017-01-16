@@ -9,6 +9,8 @@ markdown: kramdown
 kramdown:
   input: GFM
   
+paginate: 6
+paginate_path: /page:num
   
 # Site Setting
 since: 2013
